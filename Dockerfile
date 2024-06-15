@@ -1,20 +1,4 @@
-FROM ubuntu:14.04
-
-RUN apt-get update && apt-get install -y \
-    software-properties-common \
-    && add-apt-repository ppa:ondrej/php \
-    && apt-get update && apt-get install -y \
-    php5 \
-    php5-mysql \
-    php5-curl \
-    php5-json \
-    php5-cli \
-    php5-gd \
-    php5-mcrypt \
-    php5-xmlrpc \
-    php5-xsl \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+FROM dockerfiles/centos-lamp 
 
 WORKDIR /var/www/html
 
