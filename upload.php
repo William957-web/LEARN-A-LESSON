@@ -25,7 +25,7 @@ if (isset($_POST["submit"])) {
         } else {
             // Move the uploaded file to the target directory
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $targetFile)) {
-                echo "The file " . htmlspecialchars(basename($_FILES["fileToUpload"]["name"])) . " has been uploaded.";
+                echo "The file /uploads/" . htmlspecialchars(basename($_FILES["fileToUpload"]["name"])) . " has been uploaded.";
             } else {
                 echo "Sorry, there was an error uploading your file.";
             }
